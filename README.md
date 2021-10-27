@@ -39,9 +39,9 @@ You should clone this repository to a folder on your machine, and you should be 
 You require dotnet 5.0 to run the example projects (feel free to downgrade the console apps to a framework you do have if you have to).
 You should notice 3 console applications projects, one for each stage:
 
-1) requirement i above corresponds to project PortersonToXml
-2) requirement ii above corresponds to project PortersonToJson
-3) requirement iii above corresponds to project PortersonToXmlAndJson
+1) requirement i above corresponds to project PortersonToXml.
+2) requirement ii above corresponds to project PortersonToJson.
+3) requirement iii above corresponds to project PortersonToXmlAndJson.
 
 The intention is we can see the application evolve as new requirements emerge, so don't 'upgrade' an earlier application to use the same approach as a later one,
 the implementation of both 1 & 2 will be and should be simpler than the implementation of application 3.
