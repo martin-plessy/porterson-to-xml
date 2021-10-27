@@ -37,7 +37,8 @@ give a sketch design of how you would try to achieve this.
 
 You should clone this repository to a folder on your machine, and you should be able to open the solution in visual studio.
 You require dotnet 5.0 to run the example projects (feel free to downgrade the console apps to a framework you do have if you have to).
-You should notice 3 console applications projects, one for each stage 
+You should notice 3 console applications projects, one for each stage:
+
 1) requirement i above corresponds to project PortersonToXml
 2) requirement ii above corresponds to project PortersonToJson
 3) requirement iii above corresponds to project PortersonToXmlAndJson
