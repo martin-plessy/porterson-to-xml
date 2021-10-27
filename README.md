@@ -42,6 +42,10 @@ You should notice 3 console applications projects, one for each stage
 2) requirement ii above corresponds to project PortersonToJson
 3) requirement iii above corresponds to project PortersonToXmlAndJson
 
+The intention is we can see the application evolve as new requirements emerge, so don't 'upgrade' an earlier application to use the same approach as a later one,
+the implementation of both 1 & 2 will be and should be simpler than the implementation of application 3.
+
+
 # Build and Test
 
 The applications should build in visual studio in the normal manner, and if you run the apps, they should error out with "not implemented" exceptions.
