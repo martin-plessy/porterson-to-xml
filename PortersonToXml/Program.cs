@@ -9,7 +9,6 @@ namespace PortersonToXml
             throw new NotImplementedException();
         }
 
-
         static void Main(string[] args)
         {
             Console.WriteLine("To JSon");

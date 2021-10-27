@@ -28,7 +28,7 @@ i) develop a console application that transforms ExampleInput1.xml to ExampleOut
 transformation, where books are grouped together by author.
 ii) develop another console application that transforms ExampleInput1.xml to ExampleOutput1.json.
 Here the transformation is basically equivalent to the part i, except the output is in JSON.
-iv) (challenging) - you should notice that the requirments for both the xml and json transformation are basically the same, except for the output format,
+iii) (challenging) - you should notice that the requirments for both the xml and json transformation are basically the same, except for the output format,
 can you write an application where the transformation logic is written once, yet is capable of being used to transform the input into both file
 formats. If you find this too hard, or are short of time, or you find your answers to the earlier parts arent easy to adapt to achieve this, then simply
 give a sketch design of how you would try to achieve this.
@@ -37,6 +37,10 @@ give a sketch design of how you would try to achieve this.
 
 You should clone this repository to a folder on your machine, and you should be able to open the solution in visual studio.
 You require dotnet 5.0 to run the example projects (feel free to downgrade the console apps to a framework you do have if you have to).
+You should notice 3 console applications projects, one for each stage 
+1) requirement i above corresponds to project PortersonToXml
+2) requirement ii above corresponds to project PortersonToJson
+3) requirement iii above corresponds to project PortersonToXmlAndJson
 
 # Build and Test
 
