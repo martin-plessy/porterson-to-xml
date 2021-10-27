@@ -1,20 +1,47 @@
 # Introduction 
-TODO: Give a short introduction of your project. Let this section explain the objectives or the motivation behind this project. 
+
+The exercise contains no tricks (though the last part is quite challenging and it is not unexpected if you cannot complete it perfectly).
+The object of the exercise is to give you the opportunity to demonstrate your skills in a context that is as 'worklike' as possible.
+
+You are encouraged to implement simple code, that shouldnt take a large ammount of time (again the last part is challenging, but is possible,
+I suggest timeboxing any development you do for the last part to an hour or two, and present how far you have got, and what issues you think there are
+not having a complete solution is by no means a failure - it took me an hour to write an working answer which I'm not actually very fond of - I know
+how I'd write it next time!).
+You are encouraged to ask questions as you would in a work environment, but there is no deliberate holes or tricks, I have tried to write the task so
+that questions shouldnt be necessary, but like any work environment, even the best specifications are sometimes vague.
+
+The aspects of your code should be, in this order:
+
+Correctness
+Maintainability
+Simplicity
+Confidence of correctness (testing and type checking)
+Efficiency
+Reusability
+
+I would expect the answer to be in the form of a single solution with multiple console application projects. You can, in addition, have other projects
+in your solution.
+The code should be C#, and the focus is on the actual processing of the file, rather than nice to haves like logging or command line handling etc.
+
+The requirements are:
+i) develop a console application that transforms ExampleInput1.xml to ExampleOutput1.xml, where ExampleOutput1.xml is a normalised
+transformation, where books are grouped together by author.
+ii) develop another console application that transforms ExampleInput1.xml to ExampleOutput1.json.
+Here the transformation is basically equivalent to the part i, except the output is in JSON.
+iv) (challenging) - you should notice that the requirments for both the xml and json transformation are basically the same, except for the output format,
+can you write an application where the transformation logic is written once, yet is capable of being used to transform the input into both file
+formats. If you find this too hard, or are short of time, or you find your answers to the earlier parts arent easy to adapt to achieve this, then simply
+give a sketch design of how you would try to achieve this.
 
 # Getting Started
-TODO: Guide users through getting your code up and running on their own system. In this section you can talk about:
-1.	Installation process
-2.	Software dependencies
-3.	Latest releases
-4.	API references
+
+You should clone this repository to a folder on your machine, and you should be able to open the solution in visual studio.
+You require dotnet 5.0 to run the example projects (feel free to downgrade the console apps to a framework you do have if you have to).
 
 # Build and Test
-TODO: Describe and show how to build your code and run the tests. 
+
+The applications should build in visual studio in the normal manner, and if you run the apps, they should error out with "not implemented" exceptions.
 
 # Contribute
-TODO: Explain how other users and developers can contribute to make your code better. 
 
-If you want to learn more about creating good readme files then refer the following [guidelines](https://docs.microsoft.com/en-us/azure/devops/repos/git/create-a-readme?view=azure-devops). You can also seek inspiration from the below readme files:
-- [ASP.NET Core](https://github.com/aspnet/Home)
-- [Visual Studio Code](https://github.com/Microsoft/vscode)
-- [Chakra Core](https://github.com/Microsoft/ChakraCore)
+You should not try to push your answer back to this repository, but you should create your own repository somewhere else, or simply return your solution in a zip.
