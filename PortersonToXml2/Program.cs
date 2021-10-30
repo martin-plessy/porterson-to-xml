@@ -4,18 +4,18 @@ namespace PortersonToXml
 {
     class Program
     {
-        static void TransformAndSaveToXml(string input, string output)
+        static void TransformAndSaveToXml2(string input, string output)
         {
             throw new NotImplementedException();
         }
 
         static void Main(string[] args)
         {
-            Console.WriteLine("To Xml");
+            Console.WriteLine("To Xml2");
 
             var input = @"PortersonToXml\ExampleData\ExampleInput.xml";
             var output = @"PortersonToXml\ExampleData\ExampleOutput.xml";
-            TransformAndSaveToXml(input,output);
+            TransformAndSaveToXml2(input, output);
         }
     }
 }

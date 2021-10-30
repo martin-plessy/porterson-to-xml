@@ -15,8 +15,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		ExampleData\ExampleInput.xml = ExampleData\ExampleInput.xml
 		ExampleData\ExampleOutput.json = ExampleData\ExampleOutput.json
 		ExampleData\ExampleOutput.xml = ExampleData\ExampleOutput.xml
+		ExampleData\ExampleOutput2.xml = ExampleData\ExampleOutput2.xml
 		README.md = README.md
 	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PortersonToXml2", "PortersonToXml2\PortersonToXml2.csproj", "{401FE34D-57E7-45B8-9F5B-5A8674F3423F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -36,6 +39,10 @@ Global
 		{8D73FAFD-FE52-4BFF-950A-060AD6B3FEB5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8D73FAFD-FE52-4BFF-950A-060AD6B3FEB5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8D73FAFD-FE52-4BFF-950A-060AD6B3FEB5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{401FE34D-57E7-45B8-9F5B-5A8674F3423F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{401FE34D-57E7-45B8-9F5B-5A8674F3423F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{401FE34D-57E7-45B8-9F5B-5A8674F3423F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{401FE34D-57E7-45B8-9F5B-5A8674F3423F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
