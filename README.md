@@ -45,6 +45,12 @@ You will find the 4 files mentioned above in the solution items.
 * ExampleOutput.json - this is desired output of first and second task.
 * ExampleOutput2.xml - this is desired output of final task.
 
+# Testing
+
+Your solution should contain some sort of testing to validate that your results are as expected, but *DON'T GET SIDETRACKED* into XML/JSON comparisons, there are libraries that can do this. If you know them, use them, but string comparison is more than adequate for the purposes of this test.
+
+(tip - If using string comparison, you may have edit the example for whitespace to make the files match, or process the file in the tests to remove whitespace before comparison)
+
 # Getting Started
 
 You should clone this repository to a folder on your machine, and you should be able to open the solution in visual studio.
