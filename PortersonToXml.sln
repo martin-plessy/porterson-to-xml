@@ -3,12 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31702.278
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PortersonToXml", "PortersonToXml\PortersonToXml.csproj", "{FE3A77F7-241F-47DD-82EC-76B2646420BF}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PortersonToJson", "PortersonToJson\PortersonToJson.csproj", "{C618869F-893F-46F7-BB70-A7BDD54D773F}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PortersonToXmlAndJson", "PortersonToXmlAndJson\PortersonToXmlAndJson.csproj", "{8D73FAFD-FE52-4BFF-950A-060AD6B3FEB5}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{168183C4-5D69-42CA-9269-CA8DFC9DB9A5}"
 	ProjectSection(SolutionItems) = preProject
 		.gitignore = .gitignore
@@ -19,7 +13,21 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		README.md = README.md
 	EndProjectSection
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PortersonToXml", "PortersonToXml\PortersonToXml.csproj", "{FE3A77F7-241F-47DD-82EC-76B2646420BF}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PortersonToJson", "PortersonToJson\PortersonToJson.csproj", "{C618869F-893F-46F7-BB70-A7BDD54D773F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PortersonToXmlAndJson", "PortersonToXmlAndJson\PortersonToXmlAndJson.csproj", "{8D73FAFD-FE52-4BFF-950A-060AD6B3FEB5}"
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PortersonToXml2", "PortersonToXml2\PortersonToXml2.csproj", "{401FE34D-57E7-45B8-9F5B-5A8674F3423F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PortersonToXml.Tests", "PortersonToXml.Tests\PortersonToXml.Tests.csproj", "{676D5F0C-D5BC-45A9-8E0E-32D85FB33CE6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PortersonToJson.Tests", "PortersonToJson.Tests\PortersonToJson.Tests.csproj", "{501D1922-D748-46F0-AA99-097EFADAE82C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PortersonToXmlAndJson.Tests", "PortersonToXmlAndJson.Tests\PortersonToXmlAndJson.Tests.csproj", "{841F6F38-55A3-4E81-B4C5-0567E84AB098}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PortersonToXml2.Tests", "PortersonToXml2.Tests\PortersonToXml2.Tests.csproj", "{E55AA820-FB87-49C2-AC05-EE61529480BA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -43,6 +51,22 @@ Global
 		{401FE34D-57E7-45B8-9F5B-5A8674F3423F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{401FE34D-57E7-45B8-9F5B-5A8674F3423F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{401FE34D-57E7-45B8-9F5B-5A8674F3423F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{676D5F0C-D5BC-45A9-8E0E-32D85FB33CE6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{676D5F0C-D5BC-45A9-8E0E-32D85FB33CE6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{676D5F0C-D5BC-45A9-8E0E-32D85FB33CE6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{676D5F0C-D5BC-45A9-8E0E-32D85FB33CE6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{501D1922-D748-46F0-AA99-097EFADAE82C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{501D1922-D748-46F0-AA99-097EFADAE82C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{501D1922-D748-46F0-AA99-097EFADAE82C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{501D1922-D748-46F0-AA99-097EFADAE82C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{841F6F38-55A3-4E81-B4C5-0567E84AB098}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{841F6F38-55A3-4E81-B4C5-0567E84AB098}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{841F6F38-55A3-4E81-B4C5-0567E84AB098}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{841F6F38-55A3-4E81-B4C5-0567E84AB098}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E55AA820-FB87-49C2-AC05-EE61529480BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E55AA820-FB87-49C2-AC05-EE61529480BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E55AA820-FB87-49C2-AC05-EE61529480BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E55AA820-FB87-49C2-AC05-EE61529480BA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
