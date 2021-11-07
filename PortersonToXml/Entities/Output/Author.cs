@@ -1,10 +1,15 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
+using System.Xml.Serialization;
 
 namespace PortersonToXml.Entities.Output
 {
+    [XmlType("author")]
     public class Author
     {
-        public string Name { get; set; } = string.Empty; // ATTR
-        public List<Book> Books { get; } = new(); // ELEMENT
+        [XmlAttribute("name")]
+        public string Name { get; set; } = string.Empty;
+
+        [XmlArray("books")]
+        public List<Book> Books { get; } = new();
     }
 }

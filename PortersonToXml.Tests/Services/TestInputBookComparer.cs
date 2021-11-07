@@ -4,7 +4,7 @@ using System.Text.RegularExpressions;
 
 namespace PortersonToXml.Tests.Services
 {
-    internal class TestBookComparer : IComparer
+    internal class TestInputBookComparer : IComparer
     {
         public int Compare(object? x, object? y)
         {

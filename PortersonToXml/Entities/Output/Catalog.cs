@@ -1,9 +1,12 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
+using System.Xml.Serialization;
 
 namespace PortersonToXml.Entities.Output
 {
+    [XmlType("catalog")]
     public class Catalog
     {
-        public List<Author> Authors { get; } = new(); // ELEMENT
+        [XmlArray("authors")]
+        public List<Author> Authors { get; } = new();
     }
 }

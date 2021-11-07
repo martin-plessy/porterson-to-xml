@@ -187,6 +187,6 @@ namespace PortersonToXml.Tests.Services
             CollectionAssert.AreEqual(expected.Books, actual.Books, BookComparer);
         }
 
-        private static readonly IComparer BookComparer = new TestBookComparer();
+        private static readonly IComparer BookComparer = new TestInputBookComparer();
     }
 }

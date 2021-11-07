@@ -1,4 +1,6 @@
+using System;
 using System.IO;
+using System.Text;
 using System.Xml.Serialization;
 
 namespace PortersonToXml.Services
@@ -22,7 +24,25 @@ namespace PortersonToXml.Services
 
         public static string Serialize(Entities.Output.Catalog catalog)
         {
-            return "";
+            if (catalog == null)
+            {
+                throw new ArgumentNullException(nameof(catalog));
+            }
+
+            var serializer = new XmlSerializer(typeof(Entities.Output.Catalog));
+            using var stringWriter = new Utf8StringWriter();
+            var namespaces = new XmlSerializerNamespaces();
+
+            namespaces.Add("", ""); // https://stackoverflow.com/a/258974: Remove `xmlns:*` definitions on the root XML element.
+            serializer.Serialize(stringWriter, catalog, namespaces);
+
+            return stringWriter.ToString();
+        }
+
+        // https://stackoverflow.com/a/3862106: use UTF8 encoding instead of the default UTF16.
+        private class Utf8StringWriter : StringWriter
+        {
+            public override Encoding Encoding => Encoding.UTF8;
         }
     }
 }
