@@ -29,6 +29,7 @@ namespace PortersonToXml.Services
             {
                 Authors = input.Books
                     .GroupBy(book => book.Author)
+                    .OrderBy(group => group.Key)
                     .Select(group => new Entities.Output.Author
                     {
                         Name = group.Key,
@@ -42,6 +43,7 @@ namespace PortersonToXml.Services
                                 PublishDate = book.PublishDate,
                                 Description = book.Description
                             })
+                            .OrderBy(book => book.Id)
                             .ToList()
                     })
                     .ToList()

@@ -93,7 +93,7 @@ namespace PortersonToXml.Tests.Services
         }
 
         [Test]
-        public void Transform_catalog_with_many_authors_with_many_books()
+        public void Transform_catalog_with_ordered_authors_and_books()
         {
             AssertOutput(new()
             {
@@ -101,23 +101,77 @@ namespace PortersonToXml.Tests.Services
                 {
                     new()
                     {
-                        Name = "Gambardella, Matthew",
+                        Name = "A",
                         Books =
                         {
                             new()
                             {
-                                Id = "bk101",
-                                Title = "XML Developer's Guide",
-                                Genre = "Computer",
-                                Price = 44.95m,
-                                PublishDate = new DateTime(2000, 10, 01),
-                                Description = @"
-                                    An in-depth look at creating applications
-                                    with XML.
-                                "
+                                Id = "1"
+                            },
+                            new()
+                            {
+                                Id = "4"
                             }
                         }
                     },
+                    new()
+                    {
+                        Name = "B",
+                        Books =
+                        {
+                            new()
+                            {
+                                Id = "2"
+                            }
+                        }
+                    },
+                    new()
+                    {
+                        Name = "C",
+                        Books =
+                        {
+                            new()
+                            {
+                                Id = "3"
+                            }
+                        }
+                    }
+                }
+            }, DataProcessor.Transform(new()
+            {
+                Books =
+                {
+                    new()
+                    {
+                        Id = "2",
+                        Author = "B"
+                    },
+                    new()
+                    {
+                        Id = "4",
+                        Author = "A"
+                    },
+                    new()
+                    {
+                        Id = "3",
+                        Author = "C"
+                    },
+                    new()
+                    {
+                        Id = "1",
+                        Author = "A"
+                    }
+                }
+            }));
+        }
+
+        [Test]
+        public void Transform_catalog_with_many_authors_with_many_books()
+        {
+            AssertOutput(new()
+            {
+                Authors =
+                {
                     new()
                     {
                         Name = "Corets, Eva",
@@ -148,6 +202,25 @@ namespace PortersonToXml.Tests.Services
                                     agent known only as Oberon helps to create a new life
                                     for the inhabitants of London. Sequel to Maeve
                                     Ascendant.
+                                "
+                            }
+                        }
+                    },
+                    new()
+                    {
+                        Name = "Gambardella, Matthew",
+                        Books =
+                        {
+                            new()
+                            {
+                                Id = "bk101",
+                                Title = "XML Developer's Guide",
+                                Genre = "Computer",
+                                Price = 44.95m,
+                                PublishDate = new DateTime(2000, 10, 01),
+                                Description = @"
+                                    An in-depth look at creating applications
+                                    with XML.
                                 "
                             }
                         }
