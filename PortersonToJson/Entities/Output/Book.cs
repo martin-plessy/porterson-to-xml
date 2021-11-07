@@ -1,4 +1,6 @@
 using System;
+using System.Text.Json.Serialization;
+using System.Text.RegularExpressions;
 
 namespace PortersonToJson.Entities.Output
 {
@@ -9,6 +11,15 @@ namespace PortersonToJson.Entities.Output
         public string Genre { get; set; } = string.Empty;
         public decimal Price { get; set; }
         public DateTime PublishDate { get; set; }
+
+        [JsonIgnore]
         public string Description { get; set; } = string.Empty;
+
+        [JsonPropertyName("description")]
+        public string Description_normalizedEOL
+        {
+            get => Regex.Replace(Description, @"\r\n?", "\n");
+            set => Description = value;
+        }
     }
 }
