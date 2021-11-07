@@ -1,5 +1,6 @@
 using System;
 using System.IO;
+using System.Linq;
 using System.Text;
 using System.Xml.Serialization;
 
@@ -17,9 +18,34 @@ namespace PortersonToXml.Services
             return (Entities.Input.Catalog) (value!);
         }
 
-        public static Entities.Output.Catalog Transform(Entities.Input.Catalog catalog)
+        public static Entities.Output.Catalog Transform(Entities.Input.Catalog input)
         {
-            return new();
+            if (input == null)
+            {
+                throw new ArgumentNullException(nameof(input));
+            }
+
+            return new Entities.Output.Catalog
+            {
+                Authors = input.Books
+                    .GroupBy(book => book.Author)
+                    .Select(group => new Entities.Output.Author
+                    {
+                        Name = group.Key,
+                        Books = group
+                            .Select(book => new Entities.Output.Book
+                            {
+                                Id = book.Id,
+                                Title = book.Title,
+                                Genre = book.Genre,
+                                Price = book.Price,
+                                PublishDate = book.PublishDate,
+                                Description = book.Description
+                            })
+                            .ToList()
+                    })
+                    .ToList()
+            };
         }
 
         public static string Serialize(Entities.Output.Catalog catalog)

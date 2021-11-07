@@ -10,6 +10,6 @@ namespace PortersonToXml.Entities.Output
         public string Name { get; set; } = string.Empty;
 
         [XmlArray("books")]
-        public List<Book> Books { get; } = new();
+        public List<Book> Books { get; init; } = new();
     }
 }

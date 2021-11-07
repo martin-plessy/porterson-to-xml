@@ -7,6 +7,6 @@ namespace PortersonToXml.Entities.Output
     public class Catalog
     {
         [XmlArray("authors")]
-        public List<Author> Authors { get; } = new();
+        public List<Author> Authors { get; init; } = new();
     }
 }

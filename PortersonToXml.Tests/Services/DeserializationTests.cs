@@ -1,8 +1,8 @@
 using System;
+using System.Collections;
 using PortersonToXml.Services;
 using PortersonToXml.Entities.Input;
 using NUnit.Framework;
-using System.Collections;
 
 namespace PortersonToXml.Tests.Services
 {
