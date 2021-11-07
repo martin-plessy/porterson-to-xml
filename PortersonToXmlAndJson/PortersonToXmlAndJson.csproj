@@ -6,4 +6,9 @@
     <Nullable>Enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="../PortersonToXml/PortersonToXml.csproj" />
+    <ProjectReference Include="../PortersonToJson/PortersonToJson.csproj" />
+  </ItemGroup>
+
 </Project>
