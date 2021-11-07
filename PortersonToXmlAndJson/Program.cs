@@ -2,7 +2,7 @@ using System;
 using System.IO;
 using System.Text;
 
-namespace PortersonToXmlAndJson
+namespace PortersonToXmlAndJsonAndJson
 {
     internal static class Program
     {
@@ -10,7 +10,7 @@ namespace PortersonToXmlAndJson
         {
             if (args.Length != 3)
             {
-                Console.Error.WriteLine("Usage: PortersonToJson <input:FILE_PATH> <xml_output:FILE_PATH> <json_output:FILE_PATH>");
+                Console.Error.WriteLine("Usage: PortersonToXmlAndJson <input:FILE_PATH> <xml_output:FILE_PATH> <json_output:FILE_PATH>");
                 return 1;
             }
 
@@ -32,32 +32,22 @@ namespace PortersonToXmlAndJson
 
             Console.WriteLine("To Both");
 
-            TransformAndSaveToXml(inputPath, xmlOutputPath);
-            TransformAndSaveToJson(inputPath, jsonOutputPath);
+            TransformAndSaveToXmlAndJson(inputPath, xmlOutputPath, jsonOutputPath);
 
             return 0;
         }
 
-        private static void TransformAndSaveToXml(string inputPath, string outputPath)
+        private static void TransformAndSaveToXmlAndJson(string inputPath, string xmlOutputPath, string jsonOutputPath)
         {
             var input = File.ReadAllText(inputPath);
 
-            var _1 = PortersonToXml.Services.DataProcessor.Deserialize(input);
-            var _2 = PortersonToXml.Services.DataProcessor.Transform(_1);
-            var output = PortersonToXml.Services.DataProcessor.Serialize(_2);
+            var _1 = PortersonToXmlAndJson.Services.DataProcessor.Deserialize(input);
+            var _2 = PortersonToXmlAndJson.Services.DataProcessor.Transform(_1);
+            var xmlOutput = PortersonToXmlAndJson.Services.DataProcessor.SerializeToXml(_2);
+            var jsonOutput = PortersonToXmlAndJson.Services.DataProcessor.SerializeToJson(_2);
 
-            File.WriteAllText(outputPath, output, Encoding.UTF8);
-        }
-
-        private static void TransformAndSaveToJson(string inputPath, string outputPath)
-        {
-            var input = File.ReadAllText(inputPath);
-
-            var _1 = PortersonToJson.Services.DataProcessor.Deserialize(input);
-            var _2 = PortersonToJson.Services.DataProcessor.Transform(_1);
-            var output = PortersonToJson.Services.DataProcessor.Serialize(_2);
-
-            File.WriteAllText(outputPath, output, Encoding.UTF8);
+            File.WriteAllText(xmlOutputPath, xmlOutput, Encoding.UTF8);
+            File.WriteAllText(jsonOutputPath, jsonOutput, Encoding.UTF8);
         }
     }
 }
