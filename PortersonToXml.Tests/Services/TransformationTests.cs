@@ -1,7 +1,8 @@
 using System;
-using PortersonToXml.Services;
-using NUnit.Framework;
 using System.Collections;
+using PortersonToXml.Services;
+using PortersonToXml.Tests.Utilities;
+using NUnit.Framework;
 
 namespace PortersonToXml.Tests.Services
 {

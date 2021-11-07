@@ -1,8 +1,8 @@
-﻿using System.Collections;
-using PortersonToXml.Entities.Output;
+using System.Collections;
 using System.Linq;
+using PortersonToXml.Entities.Output;
 
-namespace PortersonToXml.Tests.Services
+namespace PortersonToXml.Tests.Utilities
 {
     internal class TestOutputAuthorComparer : IComparer
     {

@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using PortersonToXml.Services;
 using PortersonToXml.Entities.Input;
+using PortersonToXml.Tests.Utilities;
 using NUnit.Framework;
 
 namespace PortersonToXml.Tests.Services

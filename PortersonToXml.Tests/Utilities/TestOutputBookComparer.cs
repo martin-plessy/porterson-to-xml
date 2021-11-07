@@ -1,10 +1,10 @@
-using PortersonToXml.Entities.Input;
 using System.Collections;
 using System.Text.RegularExpressions;
+using PortersonToXml.Entities.Output;
 
-namespace PortersonToXml.Tests.Services
+namespace PortersonToXml.Tests.Utilities
 {
-    internal class TestInputBookComparer : IComparer
+    internal class TestOutputBookComparer : IComparer
     {
         public int Compare(object? x, object? y)
         {
@@ -20,9 +20,6 @@ namespace PortersonToXml.Tests.Services
             {
                 var id = a.Id.CompareTo(b.Id);
                 if (id != 0) return id;
-
-                var author = a.Author.CompareTo(b.Author);
-                if (author != 0) return author;
 
                 var title = a.Title.CompareTo(b.Title);
                 if (title != 0) return title;
