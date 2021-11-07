@@ -1,7 +1,7 @@
-﻿using Humanizer;
+using Humanizer;
 using NUnit.Framework;
 
-namespace PortersonToXml.Tests
+namespace PortersonToXml.Tests.Learning
 {
     public class HumanizerLearningTests
     {
