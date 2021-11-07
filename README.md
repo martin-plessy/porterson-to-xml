@@ -72,3 +72,7 @@ The applications should build in visual studio in the normal manner, and if you 
 # Contribute
 
 You should not try to push your answer back to this repository, but you should create your own repository somewhere else, or simply return your solution in a zip.
+
+# Notes
+
+As it's an assessment, I am committing to `main`, while I should really commit to a feature bracnh...
