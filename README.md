@@ -73,6 +73,13 @@ The applications should build in visual studio in the normal manner, and if you 
 
 You should not try to push your answer back to this repository, but you should create your own repository somewhere else, or simply return your solution in a zip.
 
-# Notes
+# Implementation Notes
 
-As it's an assessment, I am committing to `main`, while I should really commit to a feature bracnh...
+- As it is an assessment, I am committing to `main`, while I should really commit to a feature bracnh.
+- The commits corresponding to the "end" of each part are tagged `PART-1`, `PART-2`, `PART-3` and `PART-4`.
+- See commit messages for more details; some of them span multiple lines.
+- Solutions involved copy-pasting between parts, which would probably be avoided in a real-world scenario.
+- Parts 1 and 2 are comprehensive: they include both a console program and a test suite.
+- Part 3 only includes a console program: it uses components from parts 1 and 2, and those are already tested. Ideally, the common code (and tests) should have been extracted in a common project, but i wanted to keep the separation between the parts.
+- Part 4 consists only of a test project: at this point the code is each console program is pretty much the same and has low interest. It is more experimental, and is shamefully under-tested.
+- In term of complexity, I estimated 1 day, ended up 3-4 days. The major blocker being around (de)serialization and adapting to the particular formats.
